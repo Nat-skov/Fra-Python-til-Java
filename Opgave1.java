@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class Opgave1 {
     static void Pytagoras(String inTal){
         try {
-            //System.out.println(inTal);
             String[] myArray = inTal.split(" ");
-            //System.out.println(Arrays.toString(myArray));
             double[] katete = new double[myArray.length];
-            //System.out.println(katete);
                 try{
                     katete = Arrays.stream(myArray)
                             .mapToDouble(Double::parseDouble)
@@ -17,12 +14,10 @@ public class Opgave1 {
                     }
                 catch(Exception e){
                         System.out.print("\n\r Prøv at skrive 2 tal istedet \n\r");
-                        //System.out.print("\n\r");
 
                 }
             if ((katete[0]>=0 && katete[1]>=0)){   
 
-                //System.out.print(katete[1]); //
                 double hypotenus = Math.sqrt(Math.pow(katete[0], 2) + Math.pow(katete[1], 2));
                 double areal = 0.5*katete[0]*katete[1];
                 
@@ -39,7 +34,7 @@ public class Opgave1 {
             }
             catch(Exception e)
                 {
-                    System.out.println("\n\r Noget er gået galt\n\r Har du husket at skrive 2 tal?\n\r" );
+                    System.out.print("\n\r Noget er gået galt\n\r Har du husket at skrive 2 tal?\n\r" );
                 };
             
             
@@ -55,3 +50,4 @@ public class Opgave1 {
     
     
 }
+
